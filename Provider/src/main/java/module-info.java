@@ -1,2 +1,3 @@
-module Provider {
+module org.example.Provider {
+    requires Service;
 }
