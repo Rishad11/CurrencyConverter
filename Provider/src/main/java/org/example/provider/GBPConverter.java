@@ -1,4 +1,4 @@
-package org.example.Provider;
+package org.example.provider;
 
 import org.example.service.CurrencyConverter;
 

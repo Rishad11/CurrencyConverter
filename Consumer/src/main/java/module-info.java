@@ -1,6 +1,4 @@
-import org.example.service.CurrencyConverter;
-
 module Consumer {
     requires Service;
-    uses CurrencyConverter;
+    uses org.example.service.CurrencyConverter;
 }

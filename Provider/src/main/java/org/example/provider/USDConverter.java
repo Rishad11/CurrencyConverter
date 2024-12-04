@@ -1,15 +1,15 @@
-package org.example.Provider;
+package org.example.provider;
 
 import org.example.service.CurrencyConverter;
 
-public class SEKConverter implements CurrencyConverter {
+public class USDConverter implements CurrencyConverter {
     @Override
     public double convertTo(String toCurrency, double amount) {
         switch (toCurrency.toUpperCase()) {
-            case "USD":
-                return amount * 0.095; // SEK -> USD
             case "GBP":
-                return amount * 0.072; // SEK -> GBP
+                return amount * 0.75; // USD -> GBP
+            case "SEK":
+                return amount * 10.5; // USD -> SEK
             default:
                 throw new IllegalArgumentException("Unsupported currency: " + toCurrency);
         }
@@ -17,6 +17,6 @@ public class SEKConverter implements CurrencyConverter {
 
     @Override
     public String getBaseCurrency() {
-        return "SEK";
+        return "USD";
     }
 }
